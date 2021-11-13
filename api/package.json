@@ -1,7 +1,7 @@
 {
-  "name": "restapi-proyectocciclo3",
-  "version": "1.0.1",
-  "description": "REST API Proyecto Ciclo 3",
+  "name": "api-proyecto-ciclo4",
+  "version": "1.0.0",
+  "description": "REST API Proyecto Ciclo 4",
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon src/index.js --exec babel-node",
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dialgumosoft/MinTICUTPProyectoCiclo3.git"
+    "url": "https://github.com/dialgumosoft/MinTICUTPProyectoCiclo4.git"
   },
   "keywords": [],
-  "author": "P16-5",
+  "author": "P02-5",
   "license": "ISC",
   "bugs": {
     "url": "http://localhost"
