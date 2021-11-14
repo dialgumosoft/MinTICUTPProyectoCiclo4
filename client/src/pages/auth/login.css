@@ -7,7 +7,7 @@ body,
 
 .body-login {
   align-items: center;
-  padding-top: 94px;
+  padding-top: auto;
   padding-bottom: 40px;
   background-color: #f5f5f5;
 }
