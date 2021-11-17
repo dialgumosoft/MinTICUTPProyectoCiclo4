@@ -1,11 +1,23 @@
 import { Formik, ErrorMessage, Field, Form } from 'formik';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 import { HOST } from '../../settings/settings';
+import Cookies from 'universal-cookie';
+import { calculaExtraccionSesion } from '../../components/helpers/helpers';
 
 import './login.css';
 
+const cookies = new Cookies();
+
 function Login () {
-    return(        
+    function signup(e){
+        Swal.fire({
+            icon: 'signup',
+            title: 'Registrarse'
+        });
+    };
+
+    return( 
         <div className="form-signin">
             <Formik
                 initialValues = {{
@@ -21,21 +33,39 @@ function Login () {
                     return errors;
                 }}
 
-                onSubmit = {async(values, formikBag) => {
-                   try {
-                    const user = await axios.post(`${HOST}/api/auth/signin`);
-
-                    console.log(user);
-                   } catch (error) {
-                       console.log(error);
-                   }                    
+                onSubmit = {(values) => {    
+                    axios.post(`${HOST}/api/auth/signin`, values)
+                    .then((response) => {
+                        console.log(response)
+                        if(response.status === 200){
+                            cookies.set('_s', response.data.token, {
+                                path: '/',
+                                expires: calculaExtraccionSesion(),
+                            });
+                        };
+                    })
+                    .catch((err) => {
+                        if(err.response.status === 400){
+                            Swal.fire({
+                                icon:'error',
+                                title: 'Ha ocurrido un error!',
+                                text:'Usuario no encontrado'
+                            });
+                        } else if(err.response.status === 401){
+                            Swal.fire({
+                                icon:'error',
+                                title:'Ha ocurrido un error!',
+                                text:'La contraseña ingresada no es valida.'
+                            });
+                        };
+                    });                    
                 }}
             
             >
             {() => (
                 <Form>
-                    <img className="mb-4" src="iniciallogo.png" alt="" />
-                    <h1 className="h3 mb-3 fw-normal">Sign in</h1>
+                    <img className="mb-2" src="iniciallogo.png" alt="" />
+                    <h1 className="h3 mb-2 fw-normal">Sign in</h1>
 
                     <div className="form-floating">
                         <Field
@@ -88,16 +118,16 @@ function Login () {
                     <button
                         className="w-100 btn btn-lg btn-dark" 
                         type="submit"
+                        onClick={signup}
                     >
                         Sign up
                     </button>
-
-                    <p className="mt-4 mb-3 text-muted">© Munchique Software, Inc. All rights reserved 2021</p>
+                    <p className="mt-3 mb-3 text-muted">© Munchique Software, Inc. All rights reserved 2021</p>
                 </Form>
             )}    
             </Formik>
-        </div>
+        </div>        
     )
-};
+} 
 
 export default Login;
