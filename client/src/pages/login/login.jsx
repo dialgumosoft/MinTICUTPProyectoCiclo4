@@ -1,4 +1,5 @@
 import { Formik, ErrorMessage, Field, Form } from 'formik';
+import React from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { HOST } from '../../settings/settings';
@@ -9,8 +10,8 @@ import './login.css';
 
 const cookies = new Cookies();
 
-function Login () {
-    function signup(e){
+function Login (params) {
+    function signup(){
         Swal.fire({
             icon: 'signup',
             title: 'Registrarse'
@@ -18,7 +19,7 @@ function Login () {
     };
 
     return( 
-        <div className="form-signin">
+        <div className="form-signin text-center">
             <Formik
                 initialValues = {{
                     email:"",
@@ -42,6 +43,7 @@ function Login () {
                                 path: '/',
                                 expires: calculaExtraccionSesion(),
                             });
+                            params.history.push('/home');
                         };
                     })
                     .catch((err) => {
@@ -112,20 +114,21 @@ function Login () {
                     >
                         Sign in
                     </button>
-
-                    <hr/>
-                   
-                    <button
-                        className="w-100 btn btn-lg btn-dark" 
-                        type="submit"
-                        onClick={signup}
-                    >
-                        Sign up
-                    </button>
-                    <p className="mt-3 mb-3 text-muted">© Munchique Software, Inc. All rights reserved 2021</p>
-                </Form>
+                </Form>                
             )}    
             </Formik>
+            
+            <hr/>
+                   
+            <button
+                className="w-100 btn btn-lg btn-dark" 
+                type="submit"
+                onClick={signup}
+            >
+                Sign up
+            </button>
+
+            <p className="mt-3 mb-3 text-muted">© Munchique Software, Inc. All rights reserved 2021</p>
         </div>        
     )
 } 

@@ -46,7 +46,7 @@ export const signin = async (req, res) => {
       "roles"
     );
 
-    if (!userFound) return res.status(400).json({ token: null, message: "User Not Found" });
+    if (!userFound) return res.status(400).json({message: "User Not Found" });
 
     const matchPassword = await User.comparePassword(
       req.body.password,
