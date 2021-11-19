@@ -37,7 +37,6 @@ function Login (params) {
                 onSubmit = {(values) => {    
                     axios.post(`${HOST}/api/auth/signin`, values)
                     .then((response) => {
-                        console.log(response)
                         if(response.status === 200){
                             cookies.set('_s', response.data.token, {
                                 path: '/',
@@ -97,7 +96,7 @@ function Login (params) {
                         </ErrorMessage>
                     </div>
 
-                    <div className="checkbox mb-3">
+                    <div className="checkbox mb-2">
                         <label>
                             <Field 
                                 type="checkbox"
