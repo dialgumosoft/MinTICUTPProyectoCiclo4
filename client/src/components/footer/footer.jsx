@@ -8,7 +8,7 @@ function Footer(params) {
         <p className="col-md-4 mb-0 text-muted">© Munchique Software, Inc. All rights reserved 2021</p>
 
         <a href="/" className="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-          <img className="bi me-2" width="40" height="32" alt="" href="iniciallogo.png"/>
+          <img className="img-footer"alt="" src="iniciallogo.png"/>
         </a>
 
         <ul className="nav col-md-4 justify-content-end">

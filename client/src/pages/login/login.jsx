@@ -65,7 +65,7 @@ function Login (params) {
             >
             {() => (
                 <Form>
-                    <img className="mb-2" src="iniciallogo.png" alt="" />
+                    <img className="mb-3 mt-4" src="iniciallogo.png" alt="" />
                     <h1 className="h3 mb-2 fw-normal">Sign in</h1>
 
                     <div className="form-floating">
@@ -94,17 +94,6 @@ function Login (params) {
                         <ErrorMessage ErrorMessage name="password">
                             {message => <div className="text-danger">{message}</div>}
                         </ErrorMessage>
-                    </div>
-
-                    <div className="checkbox mb-2">
-                        <label>
-                            <Field 
-                                type="checkbox"
-                                value="remember-me"
-                                id="remember"
-                                name="remember"
-                            /> Remember Me
-                        </label>
                     </div>
 
                     <button
