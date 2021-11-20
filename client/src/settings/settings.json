@@ -1,3 +1,4 @@
 {
-    "HOST": "http://localhost:3000"
+  "HOST_LOCAL": "http://localhost:3000",
+  "HOST": "https://api-proyecto-ciclo4.herokuapp.com"
 }
