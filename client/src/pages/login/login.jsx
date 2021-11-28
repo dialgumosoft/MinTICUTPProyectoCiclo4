@@ -41,7 +41,7 @@ function Login(params) {
                   path: "/",
                   expires: calculaExtraccionSesion(),
                 });
-                params.history.push("/home");
+                params.history.push("/productsDetails");
               }
             })
             .catch((err) => {

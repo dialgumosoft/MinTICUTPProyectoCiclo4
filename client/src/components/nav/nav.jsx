@@ -33,7 +33,8 @@ function Nav(params) {
                 <div className="collapse navbar-collapse justify-content-md-center">
                     <ul className="navbar-nav me-auto mb-2 mb-xl-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/home">Munchique</a>
+                            <img className="img-nav" alt="Imagen Logo" src="Logo-Munchique.png" href="/home" />
+                            {/*<a className="nav-link active" aria-current="page" href="/home">Munchique</a>*/}
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/home">Home</a>
