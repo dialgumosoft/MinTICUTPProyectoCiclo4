@@ -1,0 +1,10 @@
+.container {
+    background: white;
+}
+
+.text{
+    width: auto;
+    margin: 20px;
+    padding: 5px;
+    height: 20px;
+}
