@@ -63,8 +63,8 @@ function Login(params) {
       >
         {() => (
           <Form>
-            <img className="mb-3 mt-4" src="iniciallogo.png" alt="" />
-            <h1 className="h3 mb-2 fw-normal">Sign in</h1>
+            <img className="img-fluid" src="logo_munchique.png" alt="" />
+            <h1 className="h3 mb-3 mt-3 fw-normal">Sign in</h1>
 
             <div className="form-floating">
               <Field
