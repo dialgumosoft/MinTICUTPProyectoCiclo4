@@ -7,12 +7,14 @@ import Home from '../../pages/home/home';
 import PrivateRoute from '../auth/privateRoute';
 import PageNotFound from '../../pages/error/pageNotFound/pageNotFound';
 import Unauthorized from '../../pages/error/unauthorized/unauthorized';
+import SignUp from '../../pages/signUp/signUp';
 
 function Routes () {
     return(
        <Router>
             <Switch>                
-                <Route exact path={["/"]} component= {Login}/>                          
+                <Route exact path={["/"]} component= {Login}/>
+                <Route exact path={["/signup"]} component= {SignUp}/>
                 <PrivateRoute exact path="/home" component={Home}/>
                 <Route exact path={"/unauthorized"} component={Unauthorized} />
                 <Route path={"*"} component={PageNotFound} />                
