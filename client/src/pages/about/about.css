@@ -1,0 +1,62 @@
+
+#body_about{
+height: auto;  
+background-image: linear-gradient(rgb(240, 216, 0),rgb(245, 240, 240),rgb(245, 244, 244));
+}
+
+#about-container{
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+
+
+
+#texto1, #texto2, #texto3, #texto4, #texto5{
+    margin-right: 20%;
+    margin-top: 3.5%;
+    text-align: justify;
+    padding: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+#texto-proyecto{
+    margin-right: 0%;
+    margin-left: 0.5%;
+    margin-top: 8%;
+    text-align: justify;
+    padding: auto;
+    font-family: 'Montserrat bold', sans-serif ;
+    font-size: 14px;
+
+}
+
+#img1,#img2,#img3,#img4,#img5{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 8%;
+    margin-left: 100px;
+    filter: grayscale(100%);
+    border: 1.5px solid black;
+    
+}
+
+#img6{
+    border-radius: 10%;
+    max-width: 100%;
+    height: auto;
+    padding: 2px;
+    margin-top: 8%;
+    margin-left: 0%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+    border: 3px solid rgb(90, 87, 89);
+    
+    
+}
+
+
+

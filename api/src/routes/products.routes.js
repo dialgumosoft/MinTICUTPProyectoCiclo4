@@ -13,7 +13,7 @@ router.get(
 router.get("/:productId", productsCtrl.getProductById);
 
 router.post(
-  "/products",
+  "/",
   [authJwt.verifyToken, authJwt.isModerator],
   productsCtrl.createProduct
 );
