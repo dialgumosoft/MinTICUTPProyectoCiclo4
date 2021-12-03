@@ -8,12 +8,10 @@ const AuthProvider = ({children}) => {
 
     const handleAuth = (band) => {
         setAuth(band);
-        console.log(band)
     };
 
     const handleToken = (token) => {
         setToken(token);
-        console.log(token)
     };
 
     const data = {auth, handleAuth, token, handleToken};
