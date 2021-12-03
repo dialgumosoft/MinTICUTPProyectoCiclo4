@@ -7,6 +7,7 @@ background-image: linear-gradient(rgb(240, 216, 0),rgb(245, 240, 240),rgb(245, 2
 #about-container{
     margin-top: 5%;
     margin-right: 10%;
+    padding: auto;
 }
 
 
