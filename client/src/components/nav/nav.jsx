@@ -36,14 +36,10 @@ function Nav(params) {
                 <div className="collapse navbar-collapse justify-content-md-center">
                     <ul className="navbar-nav me-auto mb-2 mb-xl-0">
                         <li className="nav-item">
-                            <img className="img-nav" alt="Imagen Logo" src="Logo-Munchique.png" href="/home" />
-                            {/*<a className="nav-link active" aria-current="page" href="/home">Munchique</a>*/}
-                        </li>
-                        <li className="nav-item">
                             <a className="nav-link " href="/about">Proyecto</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/">Productos</a>
+                            <a className="nav-link" href="/productsDetails">Productos</a>
                         </li>
                     </ul>
                     <button className="btn btn-outline-light me-2" onClick={logout}>Logout</button>

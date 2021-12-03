@@ -10,6 +10,7 @@ import PrivateRoute from '../auth/privateRoute';
 import PageNotFound from '../../pages/error/pageNotFound/pageNotFound';
 import Unauthorized from '../../pages/error/unauthorized/unauthorized';
 import SignUp from '../../pages/signUp/signUp';
+import About from '../../pages/about/about';
 
 function Routes () {
     return(
@@ -17,6 +18,7 @@ function Routes () {
             <Switch>                
                 <Route exact path={["/"]} component= {Login}/>
                 <Route exact path={["/signup"]} component= {SignUp}/>
+                <Route exact path={["/about"]} component= {About}/>
                 <PrivateRoute exact path="/home" component={Home}/>
                 <PrivateRoute exact path="/productsDetails" component={Products}/>
                 <Route exact path="/editProduct/editID/:id" component={EditProduct} />
