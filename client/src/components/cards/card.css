@@ -1,0 +1,16 @@
+.texto{
+    text-align: center;
+}
+
+.texto2{
+    margin-top: 0px;
+    padding: 10px;
+}
+
+.row .card{
+    padding: 20px;
+    height: auto;
+    margin: 0;
+    margin-top: 2px;
+    align-items: center;
+}
