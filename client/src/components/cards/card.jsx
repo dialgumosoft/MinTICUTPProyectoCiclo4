@@ -10,6 +10,7 @@ const config = {
 };
 
 function Card() {
+  
   const [listcard, setListcard] = React.useState([]);
 
   React.useEffect(() => {
@@ -23,7 +24,7 @@ function Card() {
     const tarjetas = await productos.json();
     //console.log(tarjetas);
     setListcard(tarjetas);
-  };
+  }
 
   return (
     <div>

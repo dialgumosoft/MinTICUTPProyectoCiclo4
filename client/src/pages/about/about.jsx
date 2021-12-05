@@ -6,7 +6,7 @@ import { Container, Row, Col, Image, Accordion } from "react-bootstrap";
 
 //imagenes
 import Imagen1 from "../../components/Img/diego.jpg";
-import Imagen2 from "../../components/Img/jesus.jpg";
+import Imagen2 from "../../components/Img/jesus.jpeg";
 import Imagen3 from "../../components/Img/sebastian.jpg";
 import Imagen4 from "../../components/Img/ivan.jpg";
 import Imagen5 from "../../components/Img/Andres.jpg";

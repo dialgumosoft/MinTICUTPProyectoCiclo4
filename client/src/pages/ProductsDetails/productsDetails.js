@@ -147,7 +147,7 @@ function ProductsDetails() {
                       value={name}
                       onChange={(e) => onInputChange(e)}
                       placeholder="Ingrese Nombre"
-                      required=""
+                      required
                     />
                   </div>
 
@@ -159,7 +159,7 @@ function ProductsDetails() {
                       value={category}
                       onChange={(e) => onInputChange(e)}
                       placeholder="Ingrese Categoria"
-                      required=""
+                      required
                     />
                   </div>
 
@@ -171,7 +171,7 @@ function ProductsDetails() {
                       value={price}
                       onChange={(e) => onInputChange(e)}
                       placeholder="Ingrese Precio"
-                      required=""
+                      required
                     />
                   </div>
 
@@ -183,7 +183,7 @@ function ProductsDetails() {
                       value={imgURL}
                       onChange={(e) => onInputChange(e)}
                       placeholder="Ingrese imgUrl"
-                      required=""
+                      required
                     />
                   </div>
 
@@ -230,7 +230,7 @@ function ProductsDetails() {
                 </thead>
                 <tbody>
                   {list.map((name) => (
-                    <tr>
+                    <tr key={name._id}>
                       {/*<td>{name.id}</td>*/}
                       <td>{name.name}</td>
                       <td>{name.category}</td>

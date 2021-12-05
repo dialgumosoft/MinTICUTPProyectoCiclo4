@@ -48,7 +48,7 @@ function Login (params) {
                             });
                             handleAuth(true);
                             handleToken(response.data.token);
-                            params.history.push('/home');
+                            params.history.push('/productsDetails');
                         };
                     })
                     .catch((err) => {
