@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Nav from "../../components/nav/nav";
 import Footer from "../../components/footer/footer";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,7 +16,7 @@ import "./about.css";
 
 function About(params) {
   return (
-    <>
+    <Fragment>
       <body id="body_about">
         <div>
           <Nav />
@@ -138,7 +138,7 @@ function About(params) {
           <Footer />
         </div>
       </body>
-    </>
+    </Fragment>
   );
 }
 

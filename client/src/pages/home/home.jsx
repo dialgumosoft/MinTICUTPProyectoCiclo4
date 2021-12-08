@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Nav from "../../components/nav/nav";
 import Footer from "../../components/footer/footer";
 import Carousel from "../../components/carousel/carousel";
@@ -6,7 +6,7 @@ import Cards from "../../components/cards/cards";
 
 function Home(params) {
   return (
-    <>
+    <Fragment>
       <div className="d-flex h-100 text-dark">
         <Nav />
         <div className="cover-container d-flex w-100 h-100 p-0 mx-auto flex-column">
@@ -19,7 +19,7 @@ function Home(params) {
       <div>
         <Footer />
       </div>
-    </>
+    </Fragment>
   );
 }
 
