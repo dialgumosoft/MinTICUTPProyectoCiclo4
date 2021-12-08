@@ -6,7 +6,7 @@ import "./carousel.css";
 const carousel = () => {
   return (
     <div>
-      <Carousel>
+      <Carousel infiniteloop autoPlay>
         <div className="image">
           <img src="../images/campesino_0.jpg" alt="" />
         </div>
