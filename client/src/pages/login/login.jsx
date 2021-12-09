@@ -121,7 +121,8 @@ function Login (params) {
             >
                 Sign up
             </button>
-
+            
+            <p className="mt-3 mb-3 text-info">Para ingreso al sistema, Usuario: admin@localhost Contraseña: admin</p>
             <p className="mt-3 mb-3 text-muted">© Munchique Software, Inc. All rights reserved 2021</p>
         </div>        
     )
